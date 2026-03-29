@@ -1,0 +1,22 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "SignalProcessingResult",
+    "type": "object",
+    "properties": {
+      "res": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "properties": {
+            "idx": { "type": "integer" },
+            "val": { "type": "number" },
+            "st": { "type": "string", "enum": ["crit", "norm"] }
+          },
+          "required": ["idx", "val", "st"]
+        }
+      },
+      "avg": { "type": "number" },
+      "dev": { "type": "number" }
+    },
+    "required": ["res", "avg", "dev"]
+  }
